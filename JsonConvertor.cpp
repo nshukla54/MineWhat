@@ -57,9 +57,12 @@ if ( i == keyList.size()) {
 }
 string keyValue;
 cout << "[";
-while ( getline(fin,keyValue) ) {
-while (  keyValue == " " || keyValue == "\n" || keyValue == "\t" ) {
-    getline(fin,keyValue);
+while ( !getline(fin,keyValue).eof() ) {
+while (  keyValue.empty() || keyValue == " " || keyValue == "\n" || keyValue == "\t" ) {
+    if (getline(fin,keyValue).eof()){
+        cout << "]\n";
+        return 0;
+    }
 }
 
 string value = "";
@@ -80,6 +83,5 @@ if ( i == keyValue.size()) {
 print(keys,values);
 cout << ",";
 }
-cout << "]\n";
 return 0;
 }
