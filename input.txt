@@ -1,0 +1,7 @@
+Name, Location, Age, Pincode
+Naveen, Kanpur, 23, 24
+Nitin, Allahabad, 25
+
+Sanjeev, Bangalore, 18
+
+
