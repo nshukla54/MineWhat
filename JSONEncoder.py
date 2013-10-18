@@ -1,16 +1,11 @@
 fileName = "text";
-keys = [];
-keyFound = 0;
-
-result = [];
+keys = []; keyFound = 0; result = [];
 with open(fileName) as f:
     for line in f:
         if line.strip() != "":
             if keyFound:
                 vals = line.split(',');
-                singleUser = {};
-                valIndex = 0;
-                keyIndex = 0;
+                singleUser = {}; valIndex = 0; keyIndex = 0;
                 while valIndex < len(vals) and keyIndex < len(keys):
                     singleUser[keys[keyIndex]] = vals[valIndex].strip();
                     keyIndex  = keyIndex + 1;
